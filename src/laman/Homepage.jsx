@@ -11,15 +11,18 @@ import  '../styles/Tutor.css'
 import  '../styles/Partners.css'
 
 function Homepage() {
+
   return (
    <>
     {/* Homepage */}
-   <Navbar />
+  <Navbar />
    {/* Intro */}
    <div className='wrapper'>
     <HomeSection1 />
    </div>
+
    {/* ./Intro */}
+
    <Footer />
     {/* ./Homepage */}
    </>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../styles/Navbar.css'
 
 function Navbar() {
@@ -18,6 +18,7 @@ function Navbar() {
     };
   }, []);
   return (
+<>
     <nav className={scrolled ? "nav scrolled" : "nav"}>
         <div className="wrapper">
             <div className={scrolled ? "logo scrolled a":"logo a"}><a href=''>Nzan</a></div>
@@ -29,11 +30,13 @@ function Navbar() {
                     <li><a href="#articles">Articles</a></li>
                     <li><a href="#cv">CV</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="" className="tbl-biru">Sign Up</a></li>
+                    <li><a href="" className="tbl-biru"><i className="bi bi-github"></i></a></li>
                 </ul>
             </div>
         </div>
     </nav>
+  
+</>
   )
 }
 
