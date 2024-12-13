@@ -1,10 +1,26 @@
+import React, { useState, useEffect } from "react";
+
 import '../styles/Navbar.css'
 
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav>
+    <nav className={scrolled ? "nav scrolled" : "nav"}>
         <div className="wrapper">
-            <div className="logo"><a href=''>Nzan</a></div>
+            <div className={scrolled ? "logo scrolled a":"logo a"}><a href=''>Nzan</a></div>
             <div className="menu">
                 <ul>
                     <li><a href="#home">Homepage</a></li>

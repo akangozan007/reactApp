@@ -5,6 +5,10 @@
     font-family: courier;
     color: #364f6b;
   }
+
+  .logo.scrolled a {
+    color: #F0A500;
+  }
   
   .menu {
     float: right;
@@ -20,8 +24,16 @@
     top: 0;
     background: #ffffff;
     z-index: 1;
-    border-bottom: 1px solid #364f6b;
+    transition: background-color 0.3s ease;
   }
+
+  nav.scrolled {
+    background: rgba(42, 48, 84, 0.9);
+    /* background: linear-gradient(to bottom, rgba(42, 48, 84, 0.9), rgba(42, 48, 84, 0.4), rgba(42, 48, 84, 0)); */
+    box-shadow: 0 4px 10px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; 
+  }
+  
   
   nav ul {
     list-style-type: none;
@@ -40,6 +52,9 @@
     text-align: center;
     padding: 0px 16px 0px 16px;
     text-decoration: none;
+  }
+  nav.scrolled ul li a {
+    color: #F0A500;
   }
   
   nav ul li a:hover {
