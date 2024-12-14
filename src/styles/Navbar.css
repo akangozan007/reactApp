@@ -1,4 +1,4 @@
-.logo a {
+.logo1{
     /* font-size: 20px; */
     font-weight: 800;
     /* float: left; */
@@ -6,7 +6,7 @@
     color: #364f6b;
   }
 
-  .logo.scrolled a {
+  .logo1.scrolled{
     color: #F0A500;
   }
   
@@ -35,14 +35,14 @@
   
   nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    /* margin: 0;
+    padding: 0; */
+    /* overflow: hidden; */
   }
   
-  nav ul li {
+  /* nav ul li {
     float: left;
-  }
+  } */
   
   nav ul li a {
     color: #364f6b;
