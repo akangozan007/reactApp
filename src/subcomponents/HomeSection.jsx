@@ -6,14 +6,15 @@ import { PartnersData } from "./PartnersData";
 // Import CSS
 import "../styles/Homepage.css";
 import parse from "html-react-parser";
-
+import { gsap } from "gsap";
 
 function HomeSection() {
+
   return (
     <>
       {/* Intro */}
       <section id="home" className="home">
-        <img id="MyPict" src={HomeData.image} width="100%" alt="My Picture" />
+        <img id="MyPict" src={HomeData.image} width="55%" alt="My Picture" />
         {parse(HomeData.content)}
         <br />
 

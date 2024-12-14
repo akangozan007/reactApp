@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "animejs": "^3.2.2",
+    "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "gsap": "^3.12.5",
+    "gsap-trial": "^3.12.5",
     "html-react-parser": "^5.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
