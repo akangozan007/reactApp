@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --velocity: 2;
+  --offsetX: 10; /* Example value for horizontal offset */
+  --offsetY: 10; /* Example value for vertical offset */
+  --shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Example shadow */
+}
+
+.hero__images {
+  display: block;
+  display: flex;
+  place-items: center;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  position: relative;
+  touch-action: none;
+  width: auto;
+  /* z-index: ; */
+  margin-top: 100px;
+}
+
+.hero__images .hero__image {
+  aspect-ratio: 1/1;
+  border-radius: 1rem;
+  width: clamp(6rem, 100%, 14cqi);
+}
+
+.hero__images .hero__image img {
+  border-radius: inherit;
+  box-shadow: var(--shadow);
+  pointer-events: auto;
+  width: 230px;
+  height: 230px;
+  translate: calc(var(--offsetX) * 1px)
+    calc(var(--offsetY) * 1px + var(--translateY));
+}
+
+.hero__images .hero__image:first-child img {
+  rotate: calc(2deg - var(--velocity) * 0.25deg);
+  --translateY: 5%;
+}
+
+.hero__images .hero__image:nth-child(2) img {
+  rotate: calc(-3deg - var(--velocity) * 0.25deg);
+  --translateY: -6%;
+}
+
+.hero__images .hero__image:nth-child(3) img {
+  rotate: calc(6deg - var(--velocity) * 0.25deg);
+  --translateY: 5%;
+}
+
+.hero__images .hero__image:nth-child(4) img {
+  rotate: calc(-2deg - var(--velocity) * 0.25deg);
+  --translateY: -4%;
+}
+
+.hero__images .hero__image:not(:last-child) {
+  margin-right: -6%;
+}

@@ -1,3 +1,9 @@
+body{
+  background-image:url('../images/Animated Shape.svg') !important;
+  background-size: cover; /* Menyesuaikan ukuran */
+  background-repeat: no-repeat; /* Agar tidak mengulang */
+}
+
 .sec1{
   background-image:url('../images/backgroundSec1.gif');
   background-repeat: no-repeat;

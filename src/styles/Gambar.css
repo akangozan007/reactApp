@@ -1,0 +1,7 @@
+.gambar.gambar1{
+    position:absolute;
+    top:100px;
+    right:80px;
+    background:url('') no-repeat 50% 50%;
+    background-size:cover ;
+}

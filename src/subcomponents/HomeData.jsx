@@ -3,10 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
+
 export const HomeData = {
     image:MyPicture ,
-    content:`  <div className="kolom">
+    content:`  <div className="kolom text-start text-lg-end">
         <h1 className="deskripsi display-5 text-break">Hello World!, I am Razan</h1>
         <h4>Ngoding Ngopi, Ngoprek & Ngudud</h4>
     </div>`,
+  
 };

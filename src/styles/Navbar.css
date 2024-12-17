@@ -6,6 +6,7 @@
     color: #364f6b;
   }
 
+
   .logo1.scrolled{
     color: #F0A500;
   }
@@ -20,7 +21,7 @@
     /* position: sticky; */
     /* position: -webkit-sticky; */
     top: 0;
-    /* background: #ffffff; */
+
     z-index: 1;
     transition: background-color 0.3s ease;
   }
@@ -68,12 +69,18 @@
       width: 100%;
       text-align: center;
     }
-  
+    #navbarSupportedContent ul {
+      text-align: right; /* Rata kanan */
+      display: block; /* Memastikan ul adalah block element */
+    }
+    
+    #navbarSupportedContent ul li {
+      display: block; /* Agar li turun ke bawah dalam mode kecil */
+    }
     nav .menu {
       width: 100%;
       margin: 0;
     }
-  
     nav .menu ul {
       text-align: center;
       margin: auto;

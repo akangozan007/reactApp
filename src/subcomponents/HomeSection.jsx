@@ -3,21 +3,37 @@ import { HomeData } from "./HomeData";
 import { ProjectData } from "./ProjectData";
 import { TutorData } from "./TutorData";
 import { PartnersData } from "./PartnersData";
+import { Skills } from "./Skills";
 // Import CSS
 import "../styles/Homepage.css";
+import "../styles/Skills.css";
 import parse from "html-react-parser";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
+
 
 function HomeSection() {
 
   return (
     <>
       {/* Intro */}
-      <section id="home" className="home">
-        <img id="MyPict" src={HomeData.image} width="55%" alt="My Picture" />
-        {parse(HomeData.content)}
-        <br />
-
+      <section id="home" className="home mt-3 card-group">
+        <div className="">
+          <div className="container text-center">
+            <div className="row">
+                <div className="col-lg-6 col-sm-12">
+                <img id="MyPict" src={HomeData.image} width="100%" alt="My Picture" />
+                </div>
+                <div className="col-lg-6 col-sm-12 mt-4">
+                {parse(HomeData.content)}
+                </div>
+                <div className="col-12">
+                {/* skills */}
+                <Skills />
+                 {/* ./Skills */}
+                </div>
+            </div>
+          </div>
+        </div>
       </section>
       {/* ./Intro */}
 
@@ -57,6 +73,7 @@ function HomeSection() {
           </div>
         </div>
       </section>
+      
     </>
   );
 }
