@@ -16,12 +16,12 @@ function HomeSection() {
   return (
     <>
       {/* Intro */}
-      <section id="home" className="home mt-3 card-group">
+      <section id="home" className="home mt-3">
         <div className="">
-          <div className="container text-center">
-            <div className="row">
+          <div className="container-fluid p-3">
+            <div className="row justify-content-end px-5">
                 <div className="col-lg-6 col-sm-12">
-                <img id="MyPict" src={HomeData.image} width="100%" alt="My Picture" />
+                <img id="MyPict" src={HomeData.image} className="img-fluid w-75" alt="My Picture" />
                 </div>
                 <div className="col-lg-6 col-sm-12 mt-4">
                 {parse(HomeData.content)}
@@ -38,7 +38,7 @@ function HomeSection() {
       {/* ./Intro */}
 
       {/* Online Course */}
-      <section id="courses">
+      <section id="courses" className="px-4">
         {parse(ProjectData.contentProjectData)}
         <img src={ProjectData.imageProjectData} alt="Project" />
       </section>
