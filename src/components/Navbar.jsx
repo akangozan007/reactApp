@@ -28,7 +28,7 @@ function Navbar() {
       {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       
       </button> */}
-      <a href="" className="text-decoration-none d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-list" ></i></a>
+      <a href="" className="text-decoration-none d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-list display-4 fw-bold" ></i></a>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className={`ms-5-sm py-2 ms-auto mb-2 mb-lg-0 ${scrolled ? "navbar-nav scrolled" : "navbar-nav" }`}>
           <li className="nav-item"><a className="text-decoration-none" href="#home">Homepage</a></li>

@@ -1,0 +1,20 @@
+header{
+    display: grid;
+    place-content: center;
+    height:100vh;
+    background-color:#364f6b;
+
+}
+
+.textLoad{
+    font-size:7rem;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue';
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+    line-height: 5.9rem;
+}
+.char{
+    transform: translateY(100px);
+    transition: .5s;
+    
+}
