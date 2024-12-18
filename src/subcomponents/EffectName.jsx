@@ -2,6 +2,8 @@
 import React, { useEffect } from 'react';
 import SplitType from 'split-type';
 import gsap from 'gsap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const EffectName = () => {
   useEffect(() => {
@@ -10,7 +12,7 @@ const EffectName = () => {
 
     // Animasi menggunakan GSAP
     gsap.to('.char', {
-      y: 0,           // Gerakan ke posisi semula
+      y: 1,           // Gerakan ke posisi semula
       stagger: 0.05,  // Jeda antara karakter
       delay: 0.2,     // Penundaan sebelum animasi dimulai
       duration: 0.2,  // Durasi animasi per karakter
@@ -19,7 +21,7 @@ const EffectName = () => {
 
   return (
     <header>
-      <h1 id="my-text" className='textLoad display-1 fw-bolder text-white' >Welcome To My Portfolio</h1>
+      <h1 id="my-text" className='textLoad display-2 fw-bolder text-white text-center' >Welcome To My Portfolio</h1>
     </header>
   );
 };
