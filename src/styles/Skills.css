@@ -1,42 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
-  --velocity: 2;
-  --offsetX: 10; /* Example value for horizontal offset */
-  --offsetY: 10; /* Example value for vertical offset */
-  --shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Example shadow */
+  --velocity: 2; /* Kecepatan animasi */
+  --offsetX: 10; /* Offset horizontal */
+  --offsetY: 10; /* Offset vertikal */
+  --shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow default */
 }
 
 .hero__images {
-  display: block;
   display: flex;
-  place-items: start;
   align-items: start;
   justify-content: start;
   pointer-events: none;
   position: relative;
   touch-action: none;
-  width: auto;
-  /* z-index: ; */
   margin-top: 100px;
+  flex-wrap: wrap; /* Tambahkan agar responsif */
 }
 
 .hero__images .hero__image {
   aspect-ratio: 1/1;
   border-radius: 1rem;
-  width: clamp(6rem, 100%, 14cqi);
+  width: clamp(8rem, 20vw, 18rem); /* Ukuran menyesuaikan layar */
+  margin-right: -6%; /* Efek berdempet tetap dipertahankan */
+  /* box-shadow: var(--shadow); */
 }
 
 .hero__images .hero__image img {
   border-radius: inherit;
-  /* box-shadow: var(--shadow); */
   pointer-events: auto;
-  width: 85%;
-  translate: calc(var(--offsetX) * 1px)
-    calc(var(--offsetY) * 1px + var(--translateY));
+  width: 100%;
+  transform: translate(
+    calc(var(--offsetX) * 1px),
+    calc(var(--offsetY) * 1px + var(--translateY))
+  );
+  transition: transform 0.3s ease-in-out;
 }
 
+/* Posisi dan rotasi tetap */
 .hero__images .hero__image:first-child img {
   rotate: calc(2deg - var(--velocity) * 0.25deg);
   --translateY: 5%;
@@ -57,6 +60,21 @@
   --translateY: -4%;
 }
 
-.hero__images .hero__image:not(:last-child) {
-  margin-right: -6%;
+/* Media Query untuk Responsif */
+@media (max-width: 768px) {
+  .hero__images {
+    margin-top: 50px;
+  }
+
+  .hero__images .hero__image {
+    width: clamp(6rem, 40vw, 12rem); /*Gambar mengecil dengan layar kecil*/
+    margin-right: -4%; /* Tetap berdempet */
+  }
+
+  .hero__images .hero__image img {
+    transform: translate(
+      calc(var(--offsetX) * 0.5px),
+      calc(var(--offsetY) * 0.5px + var(--translateY))
+    ); /* Sedikit kurangi efek pada layar kecil */
+  }
 }

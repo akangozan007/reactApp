@@ -8,6 +8,10 @@
     margin: 0px;
     padding: 0px;
     font-family: "Open Sans", sans-serif;
+    margin: 0; /* Hapus margin bawaan */
+    padding: 0; /* Hapus padding bawaan */
+    overflow-x: hidden; /* Cegah scroll horizontal */
+    max-width: 100%; /* Pastikan lebar tidak melebihi viewport */
   }
   
   /* .wrapper {

@@ -78,7 +78,7 @@ body{
     font-size: 20px;
     margin-bottom: 20px;
     color: #364f6b;
-    width: 100%;
+    width: auto;
     line-height: 50px;
   }
   
@@ -93,7 +93,7 @@ body{
     }
   
     section img {
-      display: block;
+      /* display: block; */
       width: 100%;
       height: auto;
     }
