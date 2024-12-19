@@ -17,13 +17,13 @@ function App() {
   }, []);
 
   return (
-    <div>
-      {loading ? (
+    <>
+    {loading ? (
         <EffectName /> // Gunakan efek animasi teks sebagai loader
       ) : (
         <Homepage />
       )}
-    </div>
+    </>
   );
 }
 

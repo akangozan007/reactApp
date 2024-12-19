@@ -16,14 +16,14 @@ function HomeSection() {
   return (
     <>
       {/* Intro */}
-      <section id="home" className="home mt-3">
-        <div className="">
-          <div className="container-fluid">
+      <section id="home" className="container-fluid home mt-3">
+        <div className="wrapper">
+          <div className="">
             <div className="row justify-content-end">
-                <div className="col-lg-6 col-sm-12 mx-sm-auto d-sm-block">
-                <img id="MyPict" src={HomeData.image} className="img-fluid mx-auto d-block" alt="My Picture" />
+                <div className="col-lg-6 col-sm-12">
+                  <img id="MyPict" src={HomeData.image} className="img-fluid elementMuka mt-3" alt="My Picture" />
                 </div>
-                <div className="col-lg-6 col-sm-12 mt-4 ms-0">
+                <div className="col-lg-6 col-sm-12">
                 {parse(HomeData.content)}
                 </div>
                 <div className="col-12">

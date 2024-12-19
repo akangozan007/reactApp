@@ -53,6 +53,7 @@ body{
     margin: auto;
     display: flex;
     margin-bottom: 50px;
+    /* width: 100%; */
   }
   
   p {
@@ -90,7 +91,29 @@ body{
   
     section img {
       /* display: block; */
-      width: 100%;
+      /* width: 100%; */
       height: auto;
     }
   }
+
+  .sadasd{
+    border:solid #fc5185;
+  }
+
+  .elementMuka {
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .elementMuka {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .elementMuka {
+      width: 50%;
+    }
+  }
+
+ 

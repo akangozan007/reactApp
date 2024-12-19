@@ -4,25 +4,28 @@
     padding: 0px;
   }
   
-  body {
+  /* body {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+  } */
+  html, body {
+    overflow-x: hidden; /* Nonaktifkan scroll horizontal */
     font-family: "Open Sans", sans-serif;
-    margin: 0; /* Hapus margin bawaan */
-    padding: 0; /* Hapus padding bawaan */
-    overflow-x: hidden; /* Cegah scroll horizontal */
-    max-width: 100%; /* Pastikan lebar tidak melebihi viewport */
+    overflow-x: hidden;
+    max-width: 100%; 
+
   }
   
-  /* .wrapper {
-    width: 1100px;
-    margin: auto;
-    position: relative;
-  } */
+  .wrapper {
+    width: 100%;
+    margin: 0;
+    /* position: relative; */
+  }
   
   @media screen and (max-width: 991.98px) {
     .wrapper {
-      width: 90%;
+      width: 100%;
     }
   }
 

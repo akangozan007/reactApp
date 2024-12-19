@@ -15,6 +15,8 @@
   justify-content: start;
   pointer-events: none;
   position: relative;
+  width: 100%;
+  /* padding:20px; */
   touch-action: none;
   margin-top: 100px;
   flex-wrap: wrap; /* Tambahkan agar responsif */
@@ -31,7 +33,7 @@
 .hero__images .hero__image img {
   border-radius: inherit;
   pointer-events: auto;
-  width: 100%;
+  width: 65%;
   transform: translate(
     calc(var(--offsetX) * 1px),
     calc(var(--offsetY) * 1px + var(--translateY))
