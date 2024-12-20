@@ -7,8 +7,12 @@ import { Skills } from "./Skills";
 // Import CSS
 import "../styles/Homepage.css";
 import "../styles/Skills.css";
+import 'lenis/dist/lenis.css';
 import parse from "html-react-parser";
-// import { gsap } from "gsap";
+import { gsap } from "gsap";
+import Lenis from 'lenis';
+import ScrollSmoother from "./ScrollSmoother";
+
 
 
 function HomeSection() {
@@ -16,10 +20,11 @@ function HomeSection() {
   return (
     <>
       {/* Intro */}
+      <ScrollSmoother>
       <section id="home" className="container-fluid home mt-3">
         <div className="wrapper">
           <div className="">
-            <div className="row justify-content-end">
+            <div className="row justify-content-end content">
                 <div className="col-lg-6 col-sm-12">
                   <img id="MyPict" src={HomeData.image} className="img-fluid elementMuka mt-3" alt="My Picture" />
                 </div>
@@ -73,7 +78,7 @@ function HomeSection() {
           </div>
         </div>
       </section>
-      
+      </ScrollSmoother>
     </>
   );
 }

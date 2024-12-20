@@ -29,10 +29,14 @@ export function Skills() {
 
   return (
     <div className="container-fluid w-100">
+      <div className='text-lg-center text-center text-sm-start'>
+        <p className='display-5 d-inline'><i class="bi bi-caret-right"></i></p>
+        <p className='display-5 d-inline'>skills</p>
+      </div>
       <div className="hero__images px-2 mx-5">
         {logos.map((logo, index) => (
           <MagneticGSApp key={index}>
-            <div className="hero__image">
+            <div className="hero__image EfekGsap">
               <img
                 // width="250"
                 className='img-fluid'
