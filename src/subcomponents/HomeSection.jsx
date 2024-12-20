@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { HomeData } from "./HomeData";
 import { ProjectData } from "./ProjectData";
 import { TutorData } from "./TutorData";
@@ -25,10 +24,10 @@ function HomeSection() {
         <div className="wrapper">
           <div className="">
             <div className="row justify-content-end content">
-                <div className="col-lg-6 col-sm-12">
+                <div className="col-lg-6 col-sm-12 h-75">
                   <img id="MyPict" src={HomeData.image} className="img-fluid elementMuka mt-3" alt="My Picture" />
                 </div>
-                <div className="col-lg-6 col-sm-12">
+                <div className="col-lg-6 col-sm-12 h-75">
                 {parse(HomeData.content)}
                 </div>
                 <div className="col-12">

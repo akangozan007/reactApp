@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect, useState } from "react";
 import MagneticGSApp from '../components/MagneticGsap';
 import BootstrapLogo from '../images/bootstrap-5-1.svg';
 import CLogo from '../images/c.svg';
@@ -27,9 +27,28 @@ export function Skills() {
     { src: CiscoLogo, alt: 'Cisco Logo' },
   ];
 
+// pengecekan skala layar
+const [isMobile, setIsMobile] = useState(false);
+  
+useEffect(() => {
+  window.screen.width <= 760 ? setIsMobile(true) : setIsMobile(false);
+}, [window.screen.width]);
+
+function detectWindowSize() {
+  window.innerWidth <= 760 ? setIsMobile(true) : setIsMobile(false);        
+}
+
+window.onresize = detectWindowSize;
+
+console.log(isMobile)
+// menentukan effect dikhususkan animasi di android
+if (isMobile) {
+  
+}
+
   return (
-    <div className="container-fluid w-100">
-      <div className='text-lg-center text-center text-sm-start'>
+    <div className="container-fluid w-100 bg-white bg-opacity-75">
+      <div className='text-lg-center text-center text-sm-start mt-5'>
         <p className='display-5 d-inline'><i class="bi bi-caret-right"></i></p>
         <p className='display-5 d-inline'>skills</p>
       </div>
@@ -43,7 +62,7 @@ export function Skills() {
                 alt={logo.alt}
                 src={logo.src}
                 draggable="false"
-                fetchPriority="high"
+                fetchpriority="high"
               />
             </div>
           </MagneticGSApp>

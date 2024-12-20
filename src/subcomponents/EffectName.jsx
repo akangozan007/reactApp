@@ -9,7 +9,7 @@ const EffectName = () => {
   useEffect(() => {
     // Pisahkan teks menjadi karakter menggunakan SplitType
     const myText = new SplitType('#my-text');
-
+    
     // Animasi menggunakan GSAP
     gsap.to('.char', {
       y: 1,           // Gerakan ke posisi semula
